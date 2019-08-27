@@ -79,7 +79,7 @@ class Store {
 
   static removeBook(isbn) {
     const books = Store.getBooks();
-    books.forEach(function(book, index){
+    books.forEach((book, index) => {
         if(book.isbn === isbn) {
           books.splice(index, 1);
         }
@@ -90,7 +90,7 @@ class Store {
 
 document.addEventListener('DOMContentLoaded', Store.displayBooks);
 
-document.getElementById('book-form').addEventListener('submit', function(e){
+document.getElementById('book-form').addEventListener('submit', e => {
   const title = document.getElementById('title').value,
         author = document.getElementById('author').value,
         isbn = document.getElementById('isbn').value,
@@ -113,7 +113,7 @@ document.getElementById('book-form').addEventListener('submit', function(e){
   e.preventDefault();
 });
 
-document.getElementById('book-list').addEventListener('click', function(e) {
+document.getElementById('book-list').addEventListener('click', e => {
 
   const ui = new UI();
 
